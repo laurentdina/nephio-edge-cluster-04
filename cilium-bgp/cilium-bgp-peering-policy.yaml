@@ -14,5 +14,5 @@ spec: # CiliumBGPPeeringPolicySpec
     neighbors: # []CiliumBGPNeighbor
     - peerAddress: '2001:db8:225::5/64'
       peerASN: 65000
-    - peerAddress: '10.101.10.5/24'
+    - peerAddress: '10.164.0.4/32'
       peerASN: 65000

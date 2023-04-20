@@ -1,0 +1,18 @@
+apiVersion: "cilium.io/v2alpha1"
+kind: CiliumBGPPeeringPolicy
+metadata: # kpt-merge: /01-bgp-peering-policy
+  name: 05-bgp-peering-policy
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'cilium.io|CiliumBGPPeeringPolicy|default|01-bgp-peering-policy'
+spec: # CiliumBGPPeeringPolicySpec
+  nodeSelector:
+    matchLabels:
+      bgp-policy: a
+  virtualRouters: # []CiliumBGPVirtualRouter
+  - localASN: 64700
+    exportPodCIDR: true
+    neighbors: # []CiliumBGPNeighbor
+    - peerAddress: '2001:db8:225::15/64'
+      peerASN: 65000
+    - peerAddress: '10.101.10.15/24'
+      peerASN: 65000

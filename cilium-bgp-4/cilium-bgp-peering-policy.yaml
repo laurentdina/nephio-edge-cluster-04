@@ -1,7 +1,7 @@
 apiVersion: "cilium.io/v2alpha1"
 kind: CiliumBGPPeeringPolicy
 metadata: # kpt-merge: /01-bgp-peering-policy
-  name: 01-bgp-peering-policy
+  name: 02-bgp-peering-policy
   annotations:
     internal.kpt.dev/upstream-identifier: 'cilium.io|CiliumBGPPeeringPolicy|default|01-bgp-peering-policy'
 spec: # CiliumBGPPeeringPolicySpec

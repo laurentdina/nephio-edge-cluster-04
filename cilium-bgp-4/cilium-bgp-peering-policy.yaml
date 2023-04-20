@@ -12,7 +12,7 @@ spec: # CiliumBGPPeeringPolicySpec
   - localASN: 64700
     exportPodCIDR: true
     neighbors: # []CiliumBGPNeighbor
-    - peerAddress: '2001:db8:225::6/64'
+    - peerAddress: '2001:db8:225::5/64'
       peerASN: 65000
-    - peerAddress: '10.101.10.6/24'
+    - peerAddress: '10.101.10.5/24'
       peerASN: 65000

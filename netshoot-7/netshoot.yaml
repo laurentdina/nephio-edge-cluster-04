@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: # kpt-merge: /netshoot-1
-  name: netshoot-1
+metadata:
+  name: netshoot-test-7
   labels:
     app: netshoot-1
   annotations:
-    internal.kpt.dev/upstream-identifier: 'apps|Deployment|default|netshoot-1'
+    internal.kpt.dev/upstream-identifier: apps|Deployment|default|netshoot-1
   namespace: ns-netshoot-7
 spec:
   replicas: 1
@@ -18,7 +18,10 @@ spec:
         app: netshoot-1
     spec:
       containers:
-      - name: netshoot-1
+      - name: netshoot-test-7
         image: nicolaka/netshoot
-        command: ["/bin/bash"]
-        args: ["-c", "while true; do ping localhost; sleep 60;done"]
+        command:
+        - /bin/bash
+        args:
+        - "-c"
+        - while true; do ping localhost; sleep 60;done

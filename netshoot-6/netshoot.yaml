@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: # kpt-merge: /netshoot-1
-  name: netshoot-1
+metadata:
+  name: netshoot-6
   labels:
     app: netshoot-1
   annotations:

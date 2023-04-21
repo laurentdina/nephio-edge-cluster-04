@@ -6,6 +6,7 @@ metadata: # kpt-merge: /netshoot-1
     app: netshoot-1
   annotations:
     internal.kpt.dev/upstream-identifier: 'apps|Deployment|default|netshoot-1'
+  namespace: ns-netshoot-6
 spec:
   replicas: 1
   selector:
